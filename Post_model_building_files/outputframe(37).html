@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)https://sf06mfnuolk-b5278c2458b95a70-0-colab.googleusercontent.com/outputframe.html?vrz=colab-20200109-082400-RC00_288901912 -->
+<html theme="light" style="overflow-y: hidden;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="vega-tooltip-style">#vg-tooltip-element {
+  visibility: hidden;
+  padding: 8px;
+  position: fixed;
+  z-index: 1000;
+  font-family: sans-serif;
+  font-size: 11px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* The default theme is the light theme. */
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #d9d9d9;
+  color: black; }
+  #vg-tooltip-element.visible {
+    visibility: visible; }
+  #vg-tooltip-element h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 13px; }
+  #vg-tooltip-element table {
+    border-spacing: 0; }
+    #vg-tooltip-element table tr {
+      border: none; }
+      #vg-tooltip-element table tr td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 2px;
+        padding-bottom: 2px; }
+        #vg-tooltip-element table tr td.key {
+          color: #808080;
+          max-width: 150px;
+          text-align: right;
+          padding-right: 4px; }
+        #vg-tooltip-element table tr td.value {
+          display: block;
+          max-width: 300px;
+          max-height: 7em;
+          text-align: left; }
+  #vg-tooltip-element.dark-theme {
+    background-color: rgba(32, 32, 32, 0.9);
+    border: 1px solid #f5f5f5;
+    color: white; }
+    #vg-tooltip-element.dark-theme td.key {
+      color: #bfbfbf; }
+</style>
+<script>
+  // Avoid arrow function syntax to stay ES5 compatible for the sake of googlebot.
+  window.addEventListener('message', function(message)  {
+    if (message.source != window.parent) {
+      return;
+    }
+    if (message.data.sandboxed_iframe_evaluation) {
+      // Message is available in scope so evaluated script can get params from
+      // it.
+      window.currentMessage = message;
+      eval.call(null, message.data.sandboxed_iframe_evaluation);
+      delete window.currentMessage;
+    }
+  });
+</script>
+<meta http-equiv="origin-trial" content="AnPGQzDksFYXnCfbZgrysCNrINCjmnseZ1bbkIETTBtq+uTIFtczD483/icOF3pZ1OpSINrVQC7s3cBaNTwjQwMAAABxeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXVzZXJjb250ZW50LmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViQ29tcG9uZW50c1YwIiwiZXhwaXJ5IjoxNjA0NTIyMDg4LCJpc1N1YmRvbWFpbiI6dHJ1ZX0="><style>html{--paper-blue-200:#90caf9;--paper-blue-400:#42a5f5;--paper-blue-500:#2196f3;--paper-blue-700:#1976d2;--paper-blue-900:#0d47a1;--paper-blue-a100:#82b1ff;--paper-blue-a200:#448aff;--paper-blue-a400:#2979ff;--paper-blue-a700:#2962ff;--paper-orange-50:#fff3e0;--paper-orange-100:#ffe0b2;--paper-orange-200:#ffcc80;--paper-orange-300:#ffb74d;--paper-orange-400:#ffa726;--paper-orange-500:#ff9800;--paper-orange-700:#f57c00;--paper-grey-50:#fafafa;--paper-grey-100:#f5f5f5;--paper-grey-200:#eeeeee;--paper-grey-300:#e0e0e0;--paper-grey-400:#bdbdbd;--paper-grey-500:#9e9e9e;--paper-grey-600:#757575;--paper-grey-700:#616161;--paper-grey-800:#424242;--paper-grey-900:#212121;--paper-red-100:#ffcdd2;--paper-red-a700:#d50000;--paper-green-a700:#00c853;--paper-white:#ffffff;--google-blue-500:#4285f4;--box-shadow-elevation-2dp:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);--box-shadow-elevation-3dp:0 3px 4px 0 rgba(0,0,0,0.14),0 1px 8px 0 rgba(0,0,0,0.12),0 3px 3px -2px rgba(0,0,0,0.4);--paper-font-subhead-font-size:16px;--paper-font-subhead-font-weight:400;--paper-font-subhead-line-height:24px;--paper-font-body1-font-weight:400;--paper-font-body1-line-height:20px}html{overflow-y:hidden}body{background:var(--colab-primary-surface-color);color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-size:14px;line-height:1.24;font-weight:400;padding:7px 0 10px 5px;margin:0}h1,h2,h3,h4,h5,h6{color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-weight:700;margin-bottom:4px}p,ul{margin-bottom:6px;margin-top:6px}pre{margin-bottom:0px;margin-top:0px}a{color:var(--colab-anchor-color)}div.stream,div.pyout,div.output_text pre,pre.stream,pre.pyout{display:inline}table.dataframe{border-collapse:collapse;border-spacing:0;border:none;table-layout:fixed}table.dataframe thead{border-bottom:1px solid var(--colab-border-color);font-family:var(--colab-code-font-family);text-align:right}table.dataframe tr,table.dataframe th,table.dataframe td{border:none;padding:0.5em;white-space:normal}table.dataframe th{font-weight:bold}table.dataframe th.col_heading{text-align:right}table.dataframe tbody tr:nth-child(odd){background:var(--colab-secondary-surface-color)}table.dataframe tbody tr:hover,table.dataframe tbody tr:nth-child(odd):hover{background-color:var(--colab-highlighted-surface-color)}table.dataframe td{text-align:right}table.dataTable input.text_filter{width:95%}table.dataTable th{text-align:left}.output_image>img{vertical-align:bottom}.ansibold{font-weight:bold}.ansiblack{color:black}.ansired{color:darkred}.ansigreen{color:darkgreen}.ansiyellow{color:brown}.ansiblue{color:darkblue}.ansipurple{color:darkviolet}.ansicyan{color:steelblue}.ansigray{color:gray}.ansibgblack{background-color:black}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:yellow}.ansibgblue{background-color:blue}.ansibgpurple{background-color:magenta}.ansibgcyan{background-color:cyan}.ansibggray{background-color:gray}.output-error span{font-weight:normal!important}input.raw_input{font-family:var(--colab-code-font-family);width:90%}input{background:var(--colab-primary-surface-color);border:1px solid var(--colab-bold-border-color);color:var(--colab-primary-text-color)}#output-area{display:flow-root}#output-area button.colab{background-color:var(--colab-secondary-surface-color);border:0;box-shadow:var(--box-shadow-elevation-3dp);color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-size:11px;margin:0px 4px;padding:6px;text-transform:uppercase;user-select:none}#output-area button.colab:hover{background-color:var(--colab-highlighted-surface-color);cursor:pointer}#output-area .output-error button.error-details{background-color:#42a5f5;color:white}#output-area .output-error button.error-details:hover{background-color:#2196f3}#output-area .stdin-widget{align-items:center;display:inline;font-family:var(--colab-code-font-family);margin-right:10px;margin-top:10px;min-width:250px;padding:1px}#output-area .stdin-widget-hidden{visibility:hidden}.pyerr .collapsed .extraneous{display:none}.pyerr .error-expander{align-items:center;cursor:pointer;display:flex}.pyerr .error-expander hr{border:0;border-top:1px solid var(--colab-bold-border-color);flex-grow:1;height:1px;margin:0 10px;padding:0}.pyerr .error-expander hr:first-child{max-width:240px}.pyerr .error-expander svg{fill:var(--colab-icon-color);height:24px;stroke:var(--colab-icon-color);width:24px}html{--colab-anchor-color:#0000ee;--colab-primary-text-color:var(--paper-grey-900);--colab-primary-surface-color:var(--paper-white);--colab-secondary-surface-color:#f7f7f7;--colab-highlighted-surface-color:var(--paper-grey-300);--colab-border-color:#dadada;--colab-bold-border-color:#111;--colab-icon-color:#616161;--ansi-black:rgb(0,0,0);--ansi-red:rgb(139,0,0);--ansi-green:rgb(0,100,0);--ansi-yellow:rgb(205,205,0);--ansi-blue:rgb(0,0,238);--ansi-magenta:rgb(205,0,205);--ansi-cyan:rgb(70,130,180);--ansi-gray:rgb(229,229,229);--ansi-bright-black:rgb(127,127,127);--ansi-bright-red:rgb(255,0,0);--ansi-bright-green:rgb(0,255,0);--ansi-bright-yellow:rgb(255,255,0);--ansi-bright-blue:rgb(92,92,255);--ansi-bright-magenta:rgb(255,0,255);--ansi-bright-cyan:rgb(0,255,255);--ansi-bright-gray:rgb(255,255,255);--colab-code-font-family:monospace;--colab-chrome-font-family:'Roboto','Noto',sans-serif}html[theme=dark]{--colab-anchor-color:var(--paper-blue-400);--colab-primary-text-color:#d5d5d5;--colab-primary-surface-color:#383838;--colab-secondary-surface-color:#454545;--colab-highlighted-surface-color:#525252;--colab-border-color:var(--paper-grey-900);--colab-bold-border-color:#eee;--colab-icon-color:#f5f5f5;--ansi-black:rgb(127,127,127);--ansi-red:rgb(255,122,136);--ansi-green:rgb(87,187,138);--ansi-yellow:rgb(255,255,102);--ansi-blue:rgb(130,177,255);--ansi-magenta:rgb(205,0,205);--ansi-cyan:rgb(153,187,215);--ansi-gray:rgb(229,229,229)}
+//@ sourceURL=https://colab.research.google.com/v2/external/outputframe.css?vrz=colab-20200109-082400-RC00_288901912</style><!--<base href="https://localhost:8080/">--><base href="."><script src="./vega@5" async=""></script><script src="./vega-lite@4.0.0" async=""></script><script src="./vega-embed@6" async=""></script><style id="vega-embed-style">.vega-embed {<br>  position: relative;<br>  display: inline-block; }<br>  .vega-embed.has-actions {<br>    padding-right: 38px; }<br>  .vega-embed details:not([open]) > :not(summary) {<br>    display: none !important; }<br>  .vega-embed summary {<br>    list-style: none;<br>    position: absolute;<br>    top: 0;<br>    right: 0;<br>    padding: 6px;<br>    z-index: 1000;<br>    background: white;<br>    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);<br>    color: #1b1e23;<br>    border: 1px solid #aaa;<br>    border-radius: 999px;<br>    opacity: 0.2;<br>    transition: opacity 0.4s ease-in;<br>    outline: none;<br>    cursor: pointer;<br>    line-height: 0px; }<br>    .vega-embed summary::-webkit-details-marker {<br>      display: none; }<br>    .vega-embed summary:active {<br>      box-shadow: #aaa 0px 0px 0px 1px inset; }<br>    .vega-embed summary svg {<br>      width: 14px;<br>      height: 14px; }<br>  .vega-embed details[open] summary {<br>    opacity: 0.7; }<br>  .vega-embed:hover summary,<br>  .vega-embed:focus summary {<br>    opacity: 1 !important;<br>    transition: opacity 0.2s ease; }<br>  .vega-embed .vega-actions {<br>    position: absolute;<br>    top: 35px;<br>    right: -9px;<br>    display: flex;<br>    flex-direction: column;<br>    padding-bottom: 8px;<br>    padding-top: 8px;<br>    border-radius: 4px;<br>    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);<br>    border: 1px solid #d9d9d9;<br>    background: white;<br>    animation-duration: 0.15s;<br>    animation-name: scale-in;<br>    animation-timing-function: cubic-bezier(0.2, 0, 0.13, 1.5); }<br>    .vega-embed .vega-actions a {<br>      padding: 8px 16px;<br>      font-family: sans-serif;<br>      font-size: 14px;<br>      font-weight: 600;<br>      white-space: nowrap;<br>      color: #434a56;<br>      text-decoration: none; }<br>      .vega-embed .vega-actions a:hover {<br>        background-color: #f7f7f9;<br>        color: black; }<br>    .vega-embed .vega-actions::before, .vega-embed .vega-actions::after {<br>      content: "";<br>      display: inline-block;<br>      position: absolute; }<br>    .vega-embed .vega-actions::before {<br>      left: auto;<br>      right: 14px;<br>      top: -16px;<br>      border: 8px solid #0000;<br>      border-bottom-color: #d9d9d9; }<br>    .vega-embed .vega-actions::after {<br>      left: auto;<br>      right: 15px;<br>      top: -14px;<br>      border: 7px solid #0000;<br>      border-bottom-color: #fff; }<br><br>.vega-embed-wrapper {<br>  max-width: 100%;<br>  overflow: scroll;<br>  padding-right: 14px; }<br><br>@keyframes scale-in {<br>  from {<br>    opacity: 0;<br>    transform: scale(0.6); }<br>  to {<br>    opacity: 1;<br>    transform: scale(1); } }<br></style></head><body style="cursor: default;"><div id="output-area"><span id="output-header"> </span><div id="output-body"><div class="output_subarea output_html rendered_html output_text pyout output-id-1">
+<div id="altair-viz-9" class="vega-embed has-actions"><canvas width="890" height="347" class="marks"></canvas><div class="vega-bindings"></div><details title="Click to view actions"><summary>
+<svg viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <circle r="2" cy="8" cx="2"></circle>
+  <circle r="2" cy="8" cx="8"></circle>
+  <circle r="2" cy="8" cx="14"></circle>
+</svg></summary><div class="vega-actions"><a href="https://localhost:8080/#" target="_blank" download="visualization.svg">Save as SVG</a><a href="https://localhost:8080/#" target="_blank" download="visualization.png">Save as PNG</a><a href="https://localhost:8080/#">View Source</a><a href="https://localhost:8080/#">View Compiled Vega</a><a href="https://localhost:8080/#">Open in Vega Editor</a></div></details></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    const outputDiv = document.getElementById("altair-viz-9");
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": {"type": "line", "color": "green"}, "encoding": {"x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "supply_yield"}}, "height": 300, "width": 800}, {"mark": {"type": "line", "color": "red"}, "encoding": {"x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "demand_yield"}}, "height": 300, "width": 800}], "data": {"name": "data-4dd25041e95fa8090ecab22f4ca8ee9f"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json", "datasets": {"data-4dd25041e95fa8090ecab22f4ca8ee9f": [{"date": "2016-01-31T00:00:00", "supply_yield": 153950868.96559998, "demand_yield": 0.0, "difference": 153950868.96559998}, {"date": "2016-02-29T00:00:00", "supply_yield": 141905646.8470002, "demand_yield": 0.0, "difference": 141905646.8470002}, {"date": "2016-03-31T00:00:00", "supply_yield": 143103301.2557, "demand_yield": 0.0, "difference": 143103301.2557}, {"date": "2016-04-30T00:00:00", "supply_yield": 148603402.9917, "demand_yield": 0.0, "difference": 148603402.9917}, {"date": "2016-05-31T00:00:00", "supply_yield": 163189833.89799973, "demand_yield": 0.0, "difference": 163189833.89799973}, {"date": "2016-06-30T00:00:00", "supply_yield": 184191060.893, "demand_yield": 0.0, "difference": 184191060.893}, {"date": "2016-07-31T00:00:00", "supply_yield": 194266462.31600013, "demand_yield": 0.0, "difference": 194266462.31600013}, {"date": "2016-08-31T00:00:00", "supply_yield": 198839942.06899983, "demand_yield": 0.0, "difference": 198839942.06899983}, {"date": "2016-09-30T00:00:00", "supply_yield": 194734058.5155998, "demand_yield": 0.0, "difference": 194734058.5155998}, {"date": "2016-10-31T00:00:00", "supply_yield": 179880024.33759993, "demand_yield": 0.0, "difference": 179880024.33759993}, {"date": "2016-11-30T00:00:00", "supply_yield": 179235800.16160002, "demand_yield": 0.0, "difference": 179235800.16160002}, {"date": "2016-12-31T00:00:00", "supply_yield": 178412224.64119992, "demand_yield": 0.0, "difference": 178412224.64119992}, {"date": "2017-01-31T00:00:00", "supply_yield": 134426724.32960412, "demand_yield": 90430481.0, "difference": 43996243.32960412}, {"date": "2017-02-28T00:00:00", "supply_yield": 122273315.30026615, "demand_yield": 75344853.0, "difference": 46928462.30026615}, {"date": "2017-03-31T00:00:00", "supply_yield": 131934445.46329536, "demand_yield": 91917783.0, "difference": 40016662.463295355}, {"date": "2017-04-30T00:00:00", "supply_yield": 128258155.63651337, "demand_yield": 82591524.0, "difference": 45666631.63651337}, {"date": "2017-05-31T00:00:00", "supply_yield": 137208650.95651758, "demand_yield": 87419669.0, "difference": 49788981.95651758}, {"date": "2017-06-30T00:00:00", "supply_yield": 152353882.27639934, "demand_yield": 297500000.0, "difference": -145146117.72360066}, {"date": "2017-07-31T00:00:00", "supply_yield": 159606006.90301302, "demand_yield": 198900000.0, "difference": -39293993.09698698}, {"date": "2017-08-31T00:00:00", "supply_yield": 166317256.26721522, "demand_yield": 97367031.0, "difference": 68950225.26721522}, {"date": "2017-09-30T00:00:00", "supply_yield": 163596339.75685853, "demand_yield": 91049286.0, "difference": 72547053.75685853}, {"date": "2017-10-31T00:00:00", "supply_yield": 157170518.5520137, "demand_yield": 91755300.0, "difference": 65415218.552013695}, {"date": "2017-11-30T00:00:00", "supply_yield": 153188765.0228766, "demand_yield": 86533266.0, "difference": 66655499.02287659}, {"date": "2017-12-31T00:00:00", "supply_yield": 152420250.78814796, "demand_yield": 88514610.0, "difference": 63905640.788147956}]}}, {"mode": "vega-lite"});
+</script></div></div><span id="output-footer"></span></div><div id="vg-tooltip-element" class="vg-tooltip"></div></body></html>
